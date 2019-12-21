@@ -15,7 +15,7 @@ class ObjectPlus
 {
 public:
     ObjectPlus(int a) : a(a) {}
-    bool operator==(ObjectPlus &rt)
+    bool operator==(ObjectPlus &rt) //重载 == 操作符
     {
         return this->a == rt.a;
     }
@@ -43,7 +43,7 @@ int main()
 */
     ObjectPlus x(2), y(4);
     cout << "ObjectP x ?= y " << isEqualTo(x, y) << endl;
-    y.setA(2);
+    y.setA(2);		//更改y的a
     cout << "After change a" << endl;
     cout << "ObjectP x ?= y " << isEqualTo(x, y) << endl;
 }
